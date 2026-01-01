@@ -1,0 +1,223 @@
+---
+---
+
+<header
+    class="w-full bg-white fixed top-0 left-0 z-50 shadow-xl"
+    id="siteHeader"
+>
+    <nav
+        class="h-20 sm:h-24 md:h-28 w-full px-4 sm:px-8 md:px-12 flex items-center justify-between relative"
+        aria-label="Navegación principal"
+    >
+        <!-- Left: Logo -->
+        <a
+            href="#inicio"
+            class="flex items-center z-10 group"
+        >
+            <img
+                src="/bandido_jeans/bandido.png"
+                alt="Bandido Jeans"
+                loading="eager"
+                class="h-14 sm:h-16 md:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-110 drop-shadow-2xl"
+            />
+        </a>
+
+        <!-- Center: Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8 xl:gap-12 absolute left-1/2 -translate-x-1/2">
+            <a 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                href="#inicio"
+            >
+                INICIO
+                <span class="nav-underline"></span>
+            </a>
+            <a 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                href="#catalogo"
+            >
+                CATÁLOGO
+                <span class="nav-underline"></span>
+            </a>
+            <a 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                href="#nosotros"
+            >
+                NOSOTROS
+                <span class="nav-underline"></span>
+            </a>
+            <a 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                href="#contacto"
+            >
+                CONTACTO
+                <span class="nav-underline"></span>
+            </a>
+        </div>
+
+        <!-- Right: CTA Button + Mobile Menu -->
+        <div class="flex items-center gap-4 z-10">
+            <a
+                href="#catalogo"
+                class="hidden sm:inline-flex items-center justify-center h-11 md:h-12 px-6 md:px-8 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white text-xs md:text-sm tracking-[0.2em] font-bold hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-red-500/50 hover:scale-105"
+            >
+                VER CATÁLOGO
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <details class="relative lg:hidden" id="siteMenu">
+                <summary
+                    class="list-none inline-flex items-center justify-center w-11 h-11 rounded-full bg-red-600 hover:bg-red-500 transition-all duration-300 cursor-pointer shadow-lg"
+                    aria-label="Abrir menú"
+                    aria-controls="siteMenuPanel"
+                    aria-expanded="false"
+                >
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                              d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </summary>
+
+                <!-- Mobile Fullscreen Menu -->
+                <div
+                    id="siteMenuPanel"
+                    role="dialog"
+                    aria-modal="true"
+                    class="fixed inset-x-0 bottom-0 z-40 menu-overlay bg-white border-t-2 border-red-600 overflow-y-auto"
+                    style="top: var(--header-h, 0px);"
+                >
+                    <div class="min-h-full w-full px-6 py-12">
+                        <div class="flex flex-col items-center text-center gap-8 text-slate-800">
+                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#inicio">INICIO</a>
+                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#catalogo">CATÁLOGO</a>
+                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#nosotros">NOSOTROS</a>
+                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#contacto">CONTACTO</a>
+                        </div>
+
+                        <div class="mt-12 max-w-sm mx-auto w-full">
+                            <a
+                                href="#catalogo"
+                                class="block w-full rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white text-sm tracking-[0.22em] font-bold py-5 text-center hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg"
+                            >
+                                VER CATÁLOGO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </nav>
+</header>
+
+<style>
+    /* Nav link hover effect */
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #dc2626, #991b1b);
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 2px;
+        box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+    }
+
+    .nav-link:hover .nav-underline {
+        width: 100%;
+    }
+
+    /* Mobile nav link animation */
+    .mobile-nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+        padding: 12px 24px;
+        border-radius: 8px;
+    }
+
+    .mobile-nav-link:hover {
+        background: linear-gradient(90deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.1));
+        transform: translateX(8px);
+        color: #dc2626;
+    }
+
+    .mobile-nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #dc2626, #991b1b);
+        transition: width 0.3s ease;
+    }
+
+    .mobile-nav-link:hover::before {
+        width: 12px;
+    }
+
+    /* Menu overlay animation */
+    @media (prefers-reduced-motion: reduce) {
+        #siteMenu[open] .menu-overlay {
+            animation: none !important;
+        }
+    }
+
+    #siteMenu[open] .menu-overlay {
+        animation: menuOverlayIn 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    @keyframes menuOverlayIn {
+        from {
+            opacity: 0;
+            transform: translateY(-12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    const header = document.getElementById('siteHeader');
+    if (header instanceof HTMLElement) {
+        const updateHeaderHeight = () => {
+            header.style.setProperty('--header-h', `${header.offsetHeight}px`);
+        };
+
+        updateHeaderHeight();
+        new ResizeObserver(updateHeaderHeight).observe(header);
+        window.addEventListener('resize', updateHeaderHeight, { passive: true });
+    }
+
+    const details = document.getElementById('siteMenu');
+    if (details instanceof HTMLDetailsElement) {
+        const summary = details.querySelector('summary');
+        const panel = details.querySelector('#siteMenuPanel');
+
+        const setOpenState = (open) => {
+            details.open = open;
+            document.documentElement.style.overflow = open ? 'hidden' : '';
+        };
+
+        if (summary) {
+            summary.addEventListener('click', (e) => {
+                e.preventDefault();
+                setOpenState(!details.open);
+            });
+        }
+
+        panel?.querySelectorAll('a[href^="#"]').forEach((a) => {
+            a.addEventListener('click', () => setOpenState(false));
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && details.open) setOpenState(false);
+        });
+    }
+</script>
