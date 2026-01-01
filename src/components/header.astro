@@ -25,28 +25,28 @@
         <!-- Center: Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8 xl:gap-12 absolute left-1/2 -translate-x-1/2">
             <a 
-                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold  relative py-2 transition-colors duration-300" 
                 href="#inicio"
             >
                 INICIO
                 <span class="nav-underline"></span>
             </a>
             <a 
-                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold  relative py-2 transition-colors duration-300" 
                 href="#catalogo"
             >
                 CATÁLOGO
                 <span class="nav-underline"></span>
             </a>
             <a 
-                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold  relative py-2 transition-colors duration-300" 
                 href="#nosotros"
             >
                 NOSOTROS
                 <span class="nav-underline"></span>
             </a>
             <a 
-                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-slate-700 hover:text-red-600 relative py-2 transition-colors duration-300" 
+                class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold  relative py-2 transition-colors duration-300" 
                 href="#contacto"
             >
                 CONTACTO
@@ -119,11 +119,10 @@
         bottom: 0;
         left: 0;
         width: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #dc2626, #991b1b);
+        height: 2px;
+        background: #dc2626;
         transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-radius: 2px;
-        box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+        border-radius: 0;
     }
 
     .nav-link:hover .nav-underline {
@@ -139,9 +138,7 @@
     }
 
     .mobile-nav-link:hover {
-        background: linear-gradient(90deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.1));
         transform: translateX(8px);
-        color: #dc2626;
     }
 
     .mobile-nav-link::before {
@@ -152,7 +149,7 @@
         transform: translateY(-50%);
         width: 0;
         height: 2px;
-        background: linear-gradient(90deg, #dc2626, #991b1b);
+        background: #dc2626;
         transition: width 0.3s ease;
     }
 
@@ -188,6 +185,7 @@
     if (header instanceof HTMLElement) {
         const updateHeaderHeight = () => {
             header.style.setProperty('--header-h', `${header.offsetHeight}px`);
+            document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
         };
 
         updateHeaderHeight();
@@ -197,18 +195,19 @@
 
     const details = document.getElementById('siteMenu');
     if (details instanceof HTMLDetailsElement) {
+        const detailsEl = details;
         const summary = details.querySelector('summary');
         const panel = details.querySelector('#siteMenuPanel');
 
-        const setOpenState = (open) => {
-            details.open = open;
+        const setOpenState = (open = false) => {
+            detailsEl.open = open;
             document.documentElement.style.overflow = open ? 'hidden' : '';
         };
 
         if (summary) {
             summary.addEventListener('click', (e) => {
                 e.preventDefault();
-                setOpenState(!details.open);
+                setOpenState(!detailsEl.open);
             });
         }
 
@@ -217,7 +216,7 @@
         });
 
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && details.open) setOpenState(false);
+            if (e.key === 'Escape' && detailsEl.open) setOpenState(false);
         });
     }
 </script>
