@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+
+<Layout>
+    <section
+	id="contacto"
+	class="w-full bg-slate-50"
+	style="scroll-margin-top: var(--header-h, 0px);"
+	aria-label="Contacto"
+>
+	<div class="mx-auto max-w-7xl px-4 sm:px-8 md:px-12 py-12 sm:py-14 md:py-16">
+		<div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+			<div>
+				<p class="text-xs tracking-[0.2em] font-bold text-slate-700">CONTACTO</p>
+				<h2 class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+					Hablemos de tu próximo jean.
+					<span class="block text-red-600">Te respondemos rápido.</span>
+				</h2>
+				<p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl">
+					Escríbenos para disponibilidad, tallas, mayoreo o dudas de modelos. Si ya sabes qué buscas, cuéntanos el fit y el lavado.
+				</p>
+			</div>
+		</div>
+
+		<div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start">
+			<div class="lg:col-span-5">
+				<div class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+					<h3 class="text-sm tracking-[0.2em] font-bold text-slate-800">DATOS</h3>
+
+					<div class="mt-6 grid gap-4">
+						<div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+							<p class="text-xs tracking-[0.2em] font-bold text-slate-700">WHATSAPP</p>
+							<p class="mt-2 text-base font-semibold text-slate-900">+52 000 000 0000</p>
+							<p class="mt-2 text-sm text-slate-600">(Cambia este número por el tuyo)</p>
+						</div>
+						<div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+							<p class="text-xs tracking-[0.2em] font-bold text-slate-700">CORREO</p>
+							<p class="mt-2 text-base font-semibold text-slate-900">ventas@bandidajeans.com</p>
+							<p class="mt-2 text-sm text-slate-600">(Cambia este correo por el tuyo)</p>
+						</div>
+						<div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+							<p class="text-xs tracking-[0.2em] font-bold text-slate-700">HORARIO</p>
+							<p class="mt-2 text-base font-semibold text-slate-900">Lun–Sáb · 10:00–19:00</p>
+							<p class="mt-2 text-sm text-slate-600">Atendemos mensajes todo el día.</p>
+						</div>
+					</div>
+
+					<div class="mt-8 border-t border-slate-200 pt-6">
+						<p class="text-xs tracking-[0.2em] font-bold text-slate-700">PARA AGILIZAR</p>
+						<ul class="mt-4 grid gap-3 text-sm text-slate-700">
+							<li class="flex items-start gap-3">
+								<span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600/10 text-red-700 font-bold">✓</span>
+								<span>Indica <span class="font-semibold text-slate-900">talla</span> y <span class="font-semibold text-slate-900">fit</span> (slim/regular/straight).</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600/10 text-red-700 font-bold">✓</span>
+								<span>¿Buscas <span class="font-semibold text-slate-900">mayoreo</span>? Dinos cantidad aproximada.</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600/10 text-red-700 font-bold">✓</span>
+								<span>Comparte ciudad y método de envío preferido.</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lg:col-span-7">
+				<div class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+					<h3 class="text-sm tracking-[0.2em] font-bold text-slate-800">ENVÍANOS UN MENSAJE</h3>
+					<form class="mt-6 grid gap-4">
+						<label class="grid gap-2">
+							<span class="text-xs tracking-[0.2em] font-bold text-slate-700">NOMBRE</span>
+							<input
+								type="text"
+								name="nombre"
+								autocomplete="name"
+								placeholder="Tu nombre"
+								class="h-12 rounded-xl border border-slate-200 bg-white px-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-600/30"
+							/>
+						</label>
+
+						<div class="grid gap-4 sm:grid-cols-2">
+							<label class="grid gap-2">
+								<span class="text-xs tracking-[0.2em] font-bold text-slate-700">TELÉFONO</span>
+								<input
+									type="tel"
+									name="telefono"
+									autocomplete="tel"
+									placeholder="Tu WhatsApp"
+									class="h-12 rounded-xl border border-slate-200 bg-white px-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-600/30"
+								/>
+							</label>
+							<label class="grid gap-2">
+								<span class="text-xs tracking-[0.2em] font-bold text-slate-700">CORREO</span>
+								<input
+									type="email"
+									name="email"
+									autocomplete="email"
+									placeholder="tucorreo@ejemplo.com"
+									class="h-12 rounded-xl border border-slate-200 bg-white px-4 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-600/30"
+								/>
+							</label>
+						</div>
+
+						<label class="grid gap-2">
+							<span class="text-xs tracking-[0.2em] font-bold text-slate-700">MENSAJE</span>
+							<textarea
+								name="mensaje"
+								rows={6}
+								placeholder="Cuéntanos qué modelo buscas, talla, fit y color..."
+								class="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-600/30"
+							></textarea>
+						</label>
+
+						<div class="pt-2 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+							<button
+								type="button"
+								class="inline-flex items-center justify-center h-12 px-8 rounded-full bg-linear-to-r from-red-600 to-red-700 text-white text-sm tracking-[0.2em] font-bold hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-red-500/50"
+							>
+								ENVIAR
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</Layout>
+
