@@ -1,15 +1,21 @@
 <main id="inicio" class="w-full">
-	<section class="w-full" style="height: 100svh;">
+	<section class="w-full relative" style="height: 100svh;">
 		<img
-			src="/bandido_jeans/bandido1.jpg"
+			src="/bandido_jeans/frontis.jpg"
 			alt="Bandido Jeans"
 			loading="eager"
 			decoding="async"
 			class="w-full h-full object-cover brightness-70"
 		/>
+		<div class="absolute inset-0 flex items-center justify-center px-4">
+			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl">
+				Nosotros no hacemos moda,<br>
+				hacemos jeans con identidad.
+			</h1>
+		</div>
 	</section>
 	
-	<div class="flex flex-none justify-center gap-10 pt-10">
+	<div class="relative flex flex-none justify-center gap-10 pt-10 pb-10 bg-cover bg-center">
 
 		<div class="relative">
 			<img src="/bandido_jeans/jeans5.webp" class="brightness-50" alt="">
@@ -40,4 +46,56 @@
 			<h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold">Prueba algo diferente.</h2>
 		</div>
 	</div>
+
+	<!-- Sección Nosotros -->
+	<section id="nosotros" class="w-full py-20 px-4 sm:px-8 md:px-12">
+		<div class="max-w-7xl mx-auto">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">NOSOTROS</h2>
+			
+			<div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+				<div class="space-y-6">
+					<h3 class="text-2xl sm:text-3xl font-semibold">Nuestra Historia</h3>
+					<p class="text-lg text-gray-700 leading-relaxed">
+						Bandido Jeans nace de la pasión por crear piezas únicas que reflejan el estilo urbano y la autenticidad. 
+						Cada diseño está pensado para quienes buscan expresar su personalidad sin límites.
+					</p>
+					<p class="text-lg text-gray-700 leading-relaxed">
+						Combinamos calidad, comodidad y diseño vanguardista para ofrecerte jeans que se adaptan a tu estilo de vida. 
+						Nuestra misión es que cada prenda cuente tu historia.
+					</p>
+					<button class="mt-6 px-8 py-3 bg-black text-white text-sm tracking-[0.2em] font-bold hover:bg-gray-800 transition-all duration-300">
+						CONOCE MÁS
+					</button>
+				</div>
+				
+				<div class="relative">
+					<img 
+						src="/bandido_jeans/jeans8.jpg" 
+						alt="Bandido Jeans - Nuestro Trabajo" 
+						class="w-full h-auto rounded-lg shadow-2xl"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección Contacto -->
+	<section id="contacto" class="w-full relative bg-black">
+		<img 
+			src="/bandido_jeans/bandido1.jpg" 
+			alt="Bandido Jeans - Contacto" 
+			class="w-full h-96 sm:h-[500px] md:h-[600px] object-cover brightness-40"
+		/>
+		<div class="absolute inset-0 flex flex-col items-center justify-center px-4">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-8 drop-shadow-2xl">
+				CONTÁCTANOS
+			</h2>
+			<a
+				href="/bandido_jeans/contacto"
+				class="px-8 sm:px-12 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base tracking-[0.2em] font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+			>
+				ESCRIBENOS
+			</a>
+		</div>
+	</section>
 </main>
