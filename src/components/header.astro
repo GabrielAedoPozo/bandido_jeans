@@ -40,7 +40,7 @@
             </a>
             <a 
                 class="nav-link text-sm xl:text-base tracking-[0.15em] font-semibold text-white relative py-2 transition-colors duration-300" 
-                href="#nosotros"
+                href="/bandido_jeans/nosotros"
             >
                 NOSOTROS
                 <span class="nav-underline"></span>
@@ -66,12 +66,12 @@
             <!-- Mobile Menu Button -->
             <details class="relative lg:hidden" id="siteMenu">
                 <summary
-                    class="list-none inline-flex items-center justify-center w-11 h-11 rounded-full bg-red-600 hover:bg-red-500 transition-all duration-300 cursor-pointer shadow-lg"
+                    class="list-none inline-flex items-center justify-center w-11 h-11 rounded-full bg-white hover:bg-gray-100 transition-all duration-300 cursor-pointer shadow-lg"
                     aria-label="Abrir menú"
                     aria-controls="siteMenuPanel"
                     aria-expanded="false"
                 >
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                               d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -82,18 +82,28 @@
                     id="siteMenuPanel"
                     role="dialog"
                     aria-modal="true"
-                    class="fixed inset-x-0 bottom-0 z-40 menu-overlay bg-white border-t-2 border-red-600 overflow-y-auto"
-                    style="top: var(--header-h, 0px);"
+                    class="fixed inset-0 z-50 menu-overlay bg-white overflow-y-auto"
                 >
-                    <div class="min-h-full w-full px-6 py-12">
-                        <div class="flex flex-col items-center text-center gap-8 text-slate-800">
-                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#inicio">INICIO</a>
-                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#catalogo">CATÁLOGO</a>
-                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#nosotros">NOSOTROS</a>
-                            <a class="mobile-nav-link text-base tracking-[0.2em] font-bold" href="#contacto">CONTACTO</a>
+                    <!-- Close Button -->
+                    <button
+                        id="closeMenuBtn"
+                        class="absolute top-6 right-6 w-11 h-11 rounded-full bg-black hover:bg-gray-800 flex items-center justify-center transition-all duration-300 shadow-lg z-10"
+                        aria-label="Cerrar menú"
+                    >
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="min-h-screen w-full px-6 py-12 flex flex-col items-center justify-center">
+                        <div class="flex flex-col items-center text-center gap-10 text-black">
+                            <a class="mobile-nav-link text-xl tracking-[0.2em] font-bold" href="#inicio">INICIO</a>
+                            <a class="mobile-nav-link text-xl tracking-[0.2em] font-bold" href="#catalogo">CATÁLOGO</a>
+                            <a class="mobile-nav-link text-xl tracking-[0.2em] font-bold" href="/bandido_jeans/nosotros">NOSOTROS</a>
+                            <a class="mobile-nav-link text-xl tracking-[0.2em] font-bold" href="/bandido_jeans/contacto">CONTACTO</a>
                         </div>
 
-                        <div class="mt-12 max-w-sm mx-auto w-full">
+                        <div class="mt-16 max-w-sm mx-auto w-full">
                             <a
                                 href="#catalogo"
                                 class="block w-full rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white text-sm tracking-[0.22em] font-bold py-5 text-center hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-lg"
@@ -214,6 +224,12 @@
         panel?.querySelectorAll('a[href^="#"]').forEach((a) => {
             a.addEventListener('click', () => setOpenState(false));
         });
+
+        // Close button
+        const closeBtn = document.getElementById('closeMenuBtn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => setOpenState(false));
+        }
 
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && detailsEl.open) setOpenState(false);

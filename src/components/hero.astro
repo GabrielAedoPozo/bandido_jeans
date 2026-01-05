@@ -7,14 +7,53 @@
 			decoding="async"
 			class="w-full h-full object-cover brightness-70"
 		/>
-		<div class="absolute inset-0 flex items-center justify-center px-4">
-			<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl">
-				Nosotros no hacemos moda,<br>
+		<div class="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-8">
+			<h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl max-w-5xl">
+				Nosotros no hacemos moda,<br class="hidden sm:block">
 				hacemos jeans con identidad.
 			</h1>
 		</div>
 	</section>
 	
+	<section class="w-full pt-5">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+			<div class="relative h-[28rem] xs:h-[32rem] sm:h-[40rem] md:h-[50rem]">
+				<img src="/bandido_jeans/kid.jpg" alt="Kids" class="w-full h-full object-cover" />
+				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
+					<h3 class="text-xl sm:text-2xl font-semibold">Niños</h3>
+					<button class="px-5 py-2 sm:px-6 border-2 border-white text-xs sm:text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
+				</div>
+			</div>
+
+			<div class="relative h-[28rem] xs:h-[32rem] sm:h-[40rem] md:h-[50rem]">
+				<img src="/bandido_jeans/man.jpg" alt="Hombre" class="w-full h-full object-cover" />
+				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
+					<h3 class="text-xl sm:text-2xl font-semibold">Hombre</h3>
+					<button class="px-5 py-2 sm:px-6 border-2 border-white text-xs sm:text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
+				</div>
+			</div>
+
+			<div class="relative h-[28rem] xs:h-[32rem] sm:h-[40rem] md:h-[50rem]">
+				<img src="/bandido_jeans/woman.jpg" alt="Mujer" class="w-full h-full object-cover" />
+				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
+					<h3 class="text-xl sm:text-2xl font-semibold">Mujer</h3>
+					<button class="px-5 py-2 sm:px-6 border-2 border-white text-xs sm:text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Banner full width con efecto parallax -->
+	<div class="relative h-[60vh] sm:h-[70vh] md:h-[80vh] w-full overflow-hidden mt-12 sm:mt-16 md:mt-20" id="parallaxBanner">
+		<div class="absolute inset-0 parallax-bg">
+			<img src="/bandido_jeans/jeans.avif" alt="" class="w-full h-full object-cover brightness-50 scale-110">
+		</div>
+		<div class="absolute inset-0 flex items-center justify-center px-4">
+			<h2 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-2xl">Prueba algo diferente.</h2>
+		</div>
+	</div>
+
 	<div class="relative flex flex-col sm:flex-row flex-none justify-center gap-10 pt-10 pb-10 bg-cover bg-center">
 
 		<div class="relative">
@@ -39,71 +78,62 @@
 
 	</div>
 
-	
-	<section class="w-full pt-20">
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
-			<div class="relative h-[26rem] sm:h-[32rem] md:h-[36rem]">
-				<img src="/bandido_jeans/kid.jpg" alt="Kids" class="w-full h-full object-cover" />
-				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
-					<h3 class="text-2xl font-semibold">Niños</h3>
-					<button class="px-6 py-2 border-2 border-white text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
-				</div>
-			</div>
-
-			<div class="relative h-[26rem] sm:h-[32rem] md:h-[36rem]">
-				<img src="/bandido_jeans/man.jpg" alt="Hombre" class="w-full h-full object-cover" />
-				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
-					<h3 class="text-2xl font-semibold">Hombre</h3>
-					<button class="px-6 py-2 border-2 border-white text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
-				</div>
-			</div>
-
-			<div class="relative h-[26rem] sm:h-[32rem] md:h-[36rem]">
-				<img src="/bandido_jeans/woman.jpg" alt="Mujer" class="w-full h-full object-cover" />
-				<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/35 text-white gap-4">
-					<h3 class="text-2xl font-semibold">Mujer</h3>
-					<button class="px-6 py-2 border-2 border-white text-sm font-semibold hover:bg-white hover:text-black transition-colors">VER MÁS</button>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Banner full width -->
-	<div class="relative h-64 sm:h-80 md:h-96 mt-10 mx-4 sm:mx-6 md:mx-8 rounded-lg overflow-hidden">
-		<img src="/bandido_jeans/jeans.avif" alt="" class="w-full h-full object-cover brightness-50">
-		<div class="absolute inset-0 flex items-center justify-center">
-			<h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold">Prueba algo diferente.</h2>
-		</div>
-	</div>
 
 
-	<!-- Sección Nosotros -->
-	<section id="nosotros" class="w-full py-20 px-4 sm:px-8 md:px-12">
+	<!-- Sección Artículos -->
+	<section id="articulos" class="w-full py-16 sm:py-24 md:py-32 px-4 sm:px-8 md:px-12 bg-gray-50">
 		<div class="max-w-7xl mx-auto">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">NOSOTROS</h2>
+			<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 sm:mb-16 md:mb-20">COMPLEMENTA TU ESTILO</h2>
 			
-			<div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-				<div class="space-y-6">
-					<h3 class="text-2xl sm:text-3xl font-semibold">Nuestra Historia</h3>
-					<p class="text-lg text-gray-700 leading-relaxed">
-						Bandido Jeans nace de la pasión por crear piezas únicas que reflejan el estilo urbano y la autenticidad. 
-						Cada diseño está pensado para quienes buscan expresar su personalidad sin límites.
-					</p>
-					<p class="text-lg text-gray-700 leading-relaxed">
-						Combinamos calidad, comodidad y diseño vanguardista para ofrecerte jeans que se adaptan a tu estilo de vida. 
-						Nuestra misión es que cada prenda cuente tu historia.
-					</p>
-					<button class="mt-6 px-8 py-3 bg-black text-white text-sm tracking-[0.2em] font-bold hover:bg-gray-800 transition-all duration-300">
-						CONOCE MÁS
-					</button>
+			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+				<!-- Artículo 1 -->
+				<div class="flex flex-col items-center">
+					<div class="w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gray-200 mb-4 sm:mb-6 flex items-center justify-center">
+						<span class="text-gray-400 text-xs sm:text-sm">Producto</span>
+					</div>
+					<p class="text-[10px] xs:text-xs font-semibold mb-1">CATEGORÍA</p>
+					<p class="text-xs sm:text-sm text-gray-600 text-center mb-2 px-1">Descripción del producto</p>
+					<p class="text-sm sm:text-base md:text-lg font-bold">S/ 00.00</p>
 				</div>
-				
-				<div class="relative">
-					<img 
-						src="/bandido_jeans/jeans8.jpg" 
-						alt="Bandido Jeans - Nuestro Trabajo" 
-						class="w-full h-auto rounded-lg shadow-2xl"
-					/>
+
+				<!-- Artículo 2 -->
+				<div class="flex flex-col items-center">
+				<div class="w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gray-200 mb-4 sm:mb-6 flex items-center justify-center">
+						<span class="text-gray-400 text-xs sm:text-sm">Producto</span>
+					</div>
+					<p class="text-[10px] xs:text-xs font-semibold mb-1">CATEGORÍA</p>
+					<p class="text-xs sm:text-sm text-gray-600 text-center mb-2 px-1">Descripción del producto</p>
+					<p class="text-sm sm:text-base md:text-lg font-bold">S/ 00.00</p>
+				</div>
+
+				<!-- Artículo 3 -->
+				<div class="flex flex-col items-center">
+				<div class="w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gray-200 mb-4 sm:mb-6 flex items-center justify-center">
+						<span class="text-gray-400 text-xs sm:text-sm">Producto</span>
+					</div>
+					<p class="text-[10px] xs:text-xs font-semibold mb-1">CATEGORÍA</p>
+					<p class="text-xs sm:text-sm text-gray-600 text-center mb-2 px-1">Descripción del producto</p>
+					<p class="text-sm sm:text-base md:text-lg font-bold">S/ 00.00</p>
+				</div>
+
+				<!-- Artículo 4 -->
+				<div class="flex flex-col items-center">
+				<div class="w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gray-200 mb-4 sm:mb-6 flex items-center justify-center">
+						<span class="text-gray-400 text-xs sm:text-sm">Producto</span>
+					</div>
+					<p class="text-[10px] xs:text-xs font-semibold mb-1">CATEGORÍA</p>
+					<p class="text-xs sm:text-sm text-gray-600 text-center mb-2 px-1">Descripción del producto</p>
+					<p class="text-sm sm:text-base md:text-lg font-bold">S/ 00.00</p>
+				</div>
+
+				<!-- Artículo 5 -->
+				<div class="flex flex-col items-center">
+				<div class="w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gray-200 mb-4 sm:mb-6 flex items-center justify-center">
+						<span class="text-gray-400 text-xs sm:text-sm">Producto</span>
+					</div>
+					<p class="text-[10px] xs:text-xs font-semibold mb-1">CATEGORÍA</p>
+					<p class="text-xs sm:text-sm text-gray-600 text-center mb-2 px-1">Descripción del producto</p>
+					<p class="text-sm sm:text-base md:text-lg font-bold">S/ 00.00</p>
 				</div>
 			</div>
 		</div>
@@ -121,11 +151,44 @@
 				CONTÁCTANOS
 			</h2>
 			<a
-				href="/bandido_jeans/contacto"
-				class="px-8 sm:px-12 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base tracking-[0.2em] font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+				href="/contacto"
+				class="px-6 sm:px-8 md:px-12 py-3 sm:py-4 bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm md:text-base tracking-[0.2em] font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
 			>
 				ESCRIBENOS
 			</a>
 		</div>
 	</section>
 </main>
+
+<style>
+	.parallax-bg {
+		will-change: transform;
+		transition: transform 0.1s ease-out;
+	}
+</style>
+
+<script>
+	// Efecto parallax
+	const parallaxBanner = document.getElementById('parallaxBanner');
+	
+	if (parallaxBanner) {
+		const parallaxBg = parallaxBanner.querySelector('.parallax-bg');
+		
+		const handleScroll = () => {
+			const scrolled = window.pageYOffset;
+			const bannerTop = parallaxBanner.offsetTop;
+			const bannerHeight = parallaxBanner.offsetHeight;
+			
+			// Calcula si el banner está visible en el viewport
+			if (scrolled + window.innerHeight > bannerTop && scrolled < bannerTop + bannerHeight) {
+				const offset = (scrolled - bannerTop) * 0.5; // Factor de velocidad del parallax
+				if (parallaxBg instanceof HTMLElement) {
+					parallaxBg.style.transform = `translateY(${offset}px)`;
+				}
+			}
+		};
+		
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		handleScroll(); // Ejecutar una vez al cargar
+	}
+</script>
