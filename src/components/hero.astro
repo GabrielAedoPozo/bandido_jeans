@@ -8,7 +8,7 @@
 			class="w-full h-full object-cover brightness-70"
 		/>
 		<div class="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-8">
-			<h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl max-w-5xl">
+			<h1 data-hero-title class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl max-w-5xl hero-letters">
 				Nosotros no hacemos moda,<br class="hidden sm:block">
 				hacemos jeans con identidad.
 			</h1>
@@ -54,29 +54,7 @@
 		</div>
 	</div>
 
-	<div class="relative flex flex-col sm:flex-row flex-none justify-center gap-10 pt-10 pb-10 bg-cover bg-center">
 
-		<div class="relative">
-			<img src="/bandido_jeans/jeans5.webp" class="brightness-50" alt="">
-			<div class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-white">
-				<h3 class="text-2xl font-semibold">Estilo Urbano</h3>
-				<a href="/bandido_jeans/galeria" class="px-6 py-2 border-2 border-white  text-sm font-semibold hover:bg-white hover:text-black transition-colors">
-					VER MÁS
-				</a>
-			</div>
-		</div>
-
-		<div class="relative">
-			<img src="/bandido_jeans/jeans6.avif" class="brightness-50" alt="">
-			<div class="absolute inset-0 flex flex-col items-center justify-center gap-6 text-white">
-				<h3 class="text-2xl font-semibold">Tendencia Actual</h3>
-				<a href="/bandido_jeans/galeria" class="px-6 py-2 border-2 border-white  text-sm font-semibold hover:bg-white hover:text-black transition-colors">
-					VER MÁS
-				</a>
-			</div>
-		</div>
-
-	</div>
 
 
 
@@ -104,6 +82,25 @@
 </main>
 
 <style>
+	:global(.hero-letters span) {
+		opacity: 0;
+		display: inline-block;
+		transform: translateY(14px);
+		animation: heroFade 0.75s ease forwards;
+		animation-delay: calc(var(--i) * 0.05s);
+	}
+
+	@keyframes heroFade {
+		from {
+			opacity: 0;
+			transform: translateY(14px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.parallax-bg {
 		will-change: transform;
 		transition: transform 0.1s ease-out;
@@ -111,6 +108,34 @@
 </style>
 
 <script>
+	// Animación de entrada por letra para el hero
+	const heroTitle = document.querySelector('[data-hero-title]');
+
+	if (heroTitle) {
+		const nodes = Array.from(heroTitle.childNodes);
+		const fragment = document.createDocumentFragment();
+		let index = 0;
+
+		nodes.forEach((node) => {
+			if (node.nodeType === Node.TEXT_NODE) {
+				const text = node.textContent ?? '';
+				for (const char of text) {
+					if (char === '\n' || char === '\r' || char === '\t') continue;
+					const span = document.createElement('span');
+					span.style.setProperty('--i', String(index));
+					span.textContent = char === ' ' ? '\u00A0' : char;
+					fragment.append(span);
+					index += 1;
+				}
+			} else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+				fragment.append(node.cloneNode(true));
+			}
+		});
+
+		heroTitle.textContent = '';
+		heroTitle.append(fragment);
+	}
+
 	// Efecto parallax
 	const parallaxBanner = document.getElementById('parallaxBanner');
 	
