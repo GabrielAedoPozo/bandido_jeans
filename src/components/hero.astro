@@ -141,6 +141,8 @@
 	
 	if (parallaxBanner) {
 		const parallaxBg = parallaxBanner.querySelector('.parallax-bg');
+		let ticking = false;
+		let lastScrolled = 0;
 		
 		const handleScroll = () => {
 			const scrolled = window.pageYOffset;
@@ -155,8 +157,16 @@
 				}
 			}
 		};
+
+		const requestTick = () => {
+			if (!ticking) {
+				requestAnimationFrame(handleScroll);
+				ticking = true;
+				setTimeout(() => { ticking = false; }, 16); // ~60fps
+			}
+		};
 		
-		window.addEventListener('scroll', handleScroll, { passive: true });
+		window.addEventListener('scroll', requestTick, { passive: true });
 		handleScroll(); // Ejecutar una vez al cargar
 	}
 </script>
