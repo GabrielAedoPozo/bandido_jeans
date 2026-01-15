@@ -1,0 +1,90 @@
+---
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+---
+
+<section class="jean-section">
+  <img
+    src="/bandido_jeans/niño2.png"
+    id="jean"
+    alt="Bandido Jeans"
+  />
+
+  <h2 id="bandido-text">BANDIDO JEANS</h2>
+</section>
+
+<style>
+  .jean-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #jean {
+    width: 300px;
+    max-width: 80vw;
+    z-index: 2;
+    filter: drop-shadow(0 25px 45px rgba(0,0,0,.3));
+  }
+
+  #bandido-text {
+    position: absolute;
+    bottom: 12%;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transform: translateY(40px);
+    pointer-events: none;
+    color: #1a1a1a;
+    text-shadow: 0 6px 30px rgba(0,0,0,.25);
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // TIMELINE ÚNICA (CLAVE)
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".jean-section",
+      start: "top top",
+      end: "+=700",
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1
+    }
+  });
+
+  // 1️⃣ Jean cae y rota (fluido)
+  tl.fromTo(
+    "#jean",
+    {
+      y: -300,
+      rotation: -12
+    },
+    {
+      y: 180,
+      rotation: 12,
+      ease: "none"
+    }
+  );
+
+  // 2️⃣ Texto aparece SOLO AL FINAL
+  tl.to(
+    "#bandido-text",
+    {
+      opacity: 1,
+      y: 0,
+      ease: "power2.out",
+      duration: 0.25
+    },
+    ">-=0.05" // aparece justo cuando termina el jean
+  );
+</script>
