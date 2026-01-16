@@ -49,7 +49,7 @@
 		</div>
 
 		<div class="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-8 z-10">
-			<h1 data-hero-title class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl max-w-5xl hero-letters">
+			<h1 data-hero-title class="hero-title text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-tight drop-shadow-2xl max-w-5xl hero-letters">
 				Nosotros no hacemos moda,<br class="hidden sm:block">
 				hacemos jeans con identidad.
 			</h1>
@@ -160,32 +160,35 @@
 
 
 
-
-
-
-
-	<!-- Sección Contacto -->
-	<section id="contacto" class="w-full relative bg-black">
-		<img 
-			src="/bandido_jeans/imG/9.jpeg" 
-			alt="Bandido Jeans - Contacto" 
-			class="w-full h-96 sm:h-[500px] md:h-[600px] object-cover brightness-40"
-		/>
-		<div class="absolute inset-0 flex flex-col items-center justify-center px-4">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mb-8 drop-shadow-2xl">
-				CONTÁCTANOS
-			</h2>
-			<a
-				href="/bandido_jeans/contacto"
-				class="px-6 sm:px-8 md:px-12 py-3 sm:py-4 bg-transparent border-2 border-white hover:bg-white hover:text-black text-white text-xs sm:text-sm md:text-base tracking-[0.2em] font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-			>
-				ESCRIBENOS
-			</a>
-		</div>
-	</section>
 </main>
 
 <style>
+	.hero-title {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		hyphens: none;
+		word-break: keep-all;
+	}
+
+	/* Ajustes específicos para móviles pequeños */
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: 1.5rem !important;
+			line-height: 1.4;
+			padding: 0 0.75rem;
+			max-width: 92vw;
+			letter-spacing: -0.02em;
+		}
+	}
+
+	@media (min-width: 481px) and (max-width: 640px) {
+		.hero-title {
+			font-size: 1.85rem !important;
+			line-height: 1.35;
+			max-width: 95vw;
+		}
+	}
+
 	:global(.hero-letters span) {
 		opacity: 0;
 		display: inline-block;
