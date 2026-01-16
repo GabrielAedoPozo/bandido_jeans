@@ -11,6 +11,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
   />
 
   <h2 id="bandido-text">BANDIDO JEANS</h2>
+
+  <div class="info-top">
+    <img src="/bandido_jeans/bandido.png" alt="Bandido" class="logo" />
+    <p class="hero-phrase italic">"Hecho de denim que no se rinde."</p>
+  </div>
 </section>
 
 <style>
@@ -21,6 +26,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background: #ffffff;
+    color: #0b1224;
+  }
+
+  .info-top {
+    position: absolute;
+    top: clamp(1.2rem, 4vw, 2.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(920px, 92vw);
+    text-align: center;
+    color: #0b1224;
+    opacity: 0;
+    transform-origin: center;
+    display: grid;
+    gap: 0.6rem;
   }
 
   #jean {
@@ -39,8 +60,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     opacity: 0;
     transform: translateY(40px);
     pointer-events: none;
-    color: #1a1a1a;
-    text-shadow: 0 6px 30px rgba(0,0,0,.25);
+    color: #0b1224;
+    text-shadow: 0 6px 30px rgba(0,0,0,.18);
+  }
+
+  .italic {
+    font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
+
+  .logo {
+    height: clamp(58px, 10vw, 92px);
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .hero-phrase {
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    color: #0b1224;
+    line-height: 1.2;
   }
 
   @media (max-width: 768px) {
@@ -62,8 +101,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
     }
 
     #bandido-text {
-      top: 12%;
-      font-size: clamp(1.5rem, 7vw, 3rem);
+      display: none;
     }
   }
 </style>
@@ -110,5 +148,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
       duration: 0.25
     },
     ">-=0.05" // aparece justo cuando termina el jean
+  );
+
+  // 3️⃣ Texto superior aparece
+  tl.to(
+    ".info-top",
+    {
+      opacity: 1,
+      y: 0,
+      ease: "power2.out",
+      duration: 0.35
+    },
+    "<+0.08"
   );
 </script>
