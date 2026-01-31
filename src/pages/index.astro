@@ -1,14 +1,81 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header.astro';
 import Hero from '../components/hero.astro';
 import Jean from '../components/Jean.astro';
 
-
+const pageTitle = 'Bandido Jeans | Jeans de Alta Calidad - Denim Auténtico Peruano';
+const pageDescription = 'Descubre Bandido Jeans: jeans premium con lavado artesanal, diseño local y denim auténtico. Colección para hombre, mujer y niños. Nosotros no hacemos moda, hacemos jeans con identidad.';
+const pageKeywords = 'bandido jeans, bandido, bandidos, jeans peru, jeans lima, jeans calidad, denim autentico, jeans artesanales, jeans hombre peru, jeans mujer peru, jeans niños, pantalones jean, ropa peruana, moda lima, jeans lavado artesanal, denim peruano, tienda jeans lima';
 ---
 
-<Layout>
+<Layout 
+	title={pageTitle}
+	description={pageDescription}
+	keywords={pageKeywords}
+	ogImage="/jeans.avif"
+>
+	<!-- Schema.org WebPage -->
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": pageTitle,
+		"description": pageDescription,
+		"url": Astro.site?.href || "https://bandidojeans.com",
+		"inLanguage": "es-PE",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "Bandido Jeans",
+			"url": Astro.site?.href || "https://bandidojeans.com"
+		},
+		"about": {
+			"@type": "Organization",
+			"name": "Bandido Jeans",
+			"description": "Fabricantes de jeans premium en Perú"
+		},
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": {
+				"@type": "EntryPoint",
+				"urlTemplate": "https://bandidojeans.com/?q={search_term_string}"
+			},
+			"query-input": "required name=search_term_string"
+		}
+	})} />
+
+	<!-- Schema.org Organization -->
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Bandido Jeans",
+		"alternateName": "Bandidos Jeans",
+		"description": "Fabricantes de jeans premium en Perú. Denim auténtico con lavado artesanal de bajo impacto.",
+		"url": Astro.site?.href || "https://bandidojeans.com",
+		"logo": `${Astro.site?.href || "https://bandidojeans.com"}/B_icon.png`,
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+51-959-515719",
+			"contactType": "customer service",
+			"areaServed": "PE",
+			"availableLanguage": ["es", "Spanish"]
+		},
+		"sameAs": [
+			"https://wa.me/51959515719"
+		]
+	})} />
+
+	<!-- Schema.org BreadcrumbList -->
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Inicio",
+			"item": Astro.site?.href || "https://bandidojeans.com"
+		}]
+	})} />
+
     <Header /> 
     <Hero />
     <Jean />

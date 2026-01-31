@@ -1,8 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'Contacto - Bandido Jeans | Comunícate con Nosotros';
+const pageDescription = 'Contáctanos para consultas sobre nuestros jeans premium. WhatsApp: +51 959 515 719. Estamos en Lima, Perú. Asesoría personalizada y atención inmediata para Bandido Jeans.';
+const pageKeywords = 'contacto bandido jeans, telefono bandido, whatsapp bandido jeans, ubicacion bandido, comprar jeans peru, tienda bandido lima, atencion cliente bandido, consultas jeans';
 ---
 
-<Layout>
+<Layout 
+	title={pageTitle}
+	description={pageDescription}
+	keywords={pageKeywords}
+	ogImage="/back2.avif"
+>
+	<!-- Schema.org ContactPage -->
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "ContactPage",
+		"name": pageTitle,
+		"description": pageDescription,
+		"url": `${Astro.site?.href || "https://bandidojeans.com"}contacto`,
+		"inLanguage": "es-PE",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "Bandido Jeans",
+			"url": Astro.site?.href || "https://bandidojeans.com"
+		},
+		"mainEntity": {
+			"@type": "Organization",
+			"name": "Bandido Jeans",
+			"telephone": "+51959515719",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+51959515719",
+				"contactType": "customer service",
+				"areaServed": "PE",
+				"availableLanguage": ["Spanish", "es"],
+				"contactOption": "TollFree"
+			}
+		}
+	})} />
+
+	<!-- Schema.org BreadcrumbList -->
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Inicio",
+				"item": Astro.site?.href || "https://bandidojeans.com"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Contacto",
+				"item": `${Astro.site?.href || "https://bandidojeans.com"}contacto`
+			}
+		]
+	})} />
+
 	<main class="w-full">
 		<!-- Hero Section -->
 		<section class="w-full relative" style="height: 60svh; min-height: 400px;">

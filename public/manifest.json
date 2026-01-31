@@ -1,0 +1,27 @@
+{
+  "name": "Bandido Jeans - Denim Auténtico Peruano",
+  "short_name": "Bandido Jeans",
+  "description": "Jeans premium con lavado artesanal, diseño local y denim auténtico. Colección para hombre, mujer y niños.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#DC2626",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/B_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/B_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle", "fashion"],
+  "lang": "es-PE",
+  "dir": "ltr"
+}

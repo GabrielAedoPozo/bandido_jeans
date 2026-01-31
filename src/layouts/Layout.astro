@@ -7,16 +7,155 @@ import '../styles/global.css';
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
 
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	canonicalURL?: string;
+	noindex?: boolean;
+}
+
+const { 
+	title = 'Bandido Jeans | Jeans de Alta Calidad - Denim Auténtico Peruano',
+	description = 'Bandido Jeans: Fabricantes de jeans premium en Perú. Denim auténtico, lavado artesanal, diseño local. Jeans para hombre, mujer y niños con identidad y estilo único.',
+	keywords = 'bandido jeans, bandido, bandidos, jeans peru, jeans lima, jeans de calidad, denim peruano, jeans artesanales, jeans hombre, jeans mujer, jeans niños, pantalones denim, ropa peru, moda peruana, jeans lavado artesanal',
+	ogImage = '/jeans.avif',
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+	noindex = false
+} = Astro.props;
+
+const siteURL = Astro.site || 'https://bandidojeans.com';
+const fullOGImage = new URL(ogImage, siteURL).href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/B_icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Bandido Jeans" />
+		<meta name="language" content="Spanish" />
+		<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+		<meta name="googlebot" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/B_icon.png" />
+		<link rel="apple-touch-icon" href="/B_icon.png" />
+		
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="/manifest.json" />
+		
+		<!-- Humans.txt -->
+		<link type="text/plain" rel="author" href="/humans.txt" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOGImage} />
+		<meta property="og:site_name" content="Bandido Jeans" />
+		<meta property="og:locale" content="es_PE" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullOGImage} />
+		
+		<!-- Additional SEO -->
+		<meta name="theme-color" content="#DC2626" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Bandido Jeans | Inicio</title>
+		
+		<!-- Geo Tags -->
+		<meta name="geo.region" content="PE-LIM" />
+		<meta name="geo.placename" content="Lima" />
+		<meta name="geo.position" content="-12.046374;-77.042793" />
+		<meta name="ICBM" content="-12.046374, -77.042793" />
+		
+		<!-- Business Info -->
+		<meta name="contact" content="959515719" />
+		<meta name="coverage" content="Worldwide" />
+		<meta name="distribution" content="Global" />
+		<meta name="rating" content="General" />
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "ClothingStore",
+			"name": "Bandido Jeans",
+			"description": "Fabricantes de jeans premium en Perú. Denim auténtico con lavado artesanal.",
+			"url": siteURL,
+			"logo": new URL('/B_icon.png', siteURL).href,
+			"image": fullOGImage,
+			"telephone": "+51959515719",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "PE",
+				"addressLocality": "Lima",
+				"addressRegion": "Lima"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "-12.046374",
+				"longitude": "-77.042793"
+			},
+			"priceRange": "$$",
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday",
+					"Saturday"
+				],
+				"opens": "09:00",
+				"closes": "18:00"
+			},
+			"sameAs": [
+				"https://wa.me/51959515719"
+			],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Colección Bandido Jeans",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Jeans para Hombre"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Jeans para Mujer"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Jeans para Niños"
+						}
+					}
+				]
+			}
+		})} />
 	</head>
 	<body>
 		<Header />

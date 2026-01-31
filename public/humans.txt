@@ -1,0 +1,12 @@
+/* TEAM */
+Website: Bandido Jeans
+Location: Lima, Peru
+Contact: +51 959 515 719
+
+/* SITE */
+Last update: 2026/01/31
+Language: Spanish / Español
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Astro, Tailwind CSS
+Software: VS Code
+Keywords: bandido, bandidos, jeans, denim, peru, lima, artesanal
