@@ -47,6 +47,9 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 		
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" hreflang="es-PE" href={canonicalURL} />
+		<meta name="application-name" content="Bandido Jeans" />
+		<meta name="apple-mobile-web-app-title" content="Bandido Jeans" />
 		
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/B_icon.png" />
@@ -91,6 +94,30 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 		<meta name="rating" content="General" />
 		
 		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Bandido Jeans",
+			"url": siteURL,
+			"inLanguage": "es-PE",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Bandido Jeans",
+				"url": siteURL,
+				"logo": new URL('/B_icon.png', siteURL).href
+			}
+		})} />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "SiteNavigationElement",
+			"name": ["Inicio", "Galería", "Nosotros", "Contacto"],
+			"url": [
+				siteURL,
+				new URL('/galeria', siteURL).href,
+				new URL('/nosotros', siteURL).href,
+				new URL('/contacto', siteURL).href
+			]
+		})} />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "ClothingStore",

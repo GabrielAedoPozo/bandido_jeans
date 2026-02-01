@@ -32,36 +32,7 @@ const pageKeywords = 'bandido jeans, bandido, bandidos, jeans peru, jeans lima, 
 			"@type": "Organization",
 			"name": "Bandido Jeans",
 			"description": "Fabricantes de jeans premium en Perú"
-		},
-		"potentialAction": {
-			"@type": "SearchAction",
-			"target": {
-				"@type": "EntryPoint",
-				"urlTemplate": "https://bandidojeans.com/?q={search_term_string}"
-			},
-			"query-input": "required name=search_term_string"
 		}
-	})} />
-
-	<!-- Schema.org Organization -->
-	<script type="application/ld+json" set:html={JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "Organization",
-		"name": "Bandido Jeans",
-		"alternateName": "Bandidos Jeans",
-		"description": "Fabricantes de jeans premium en Perú. Denim auténtico con lavado artesanal de bajo impacto.",
-		"url": Astro.site?.href || "https://bandidojeans.com",
-		"logo": `${Astro.site?.href || "https://bandidojeans.com"}/B_icon.png`,
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+51-959-515719",
-			"contactType": "customer service",
-			"areaServed": "PE",
-			"availableLanguage": ["es", "Spanish"]
-		},
-		"sameAs": [
-			"https://wa.me/51959515719"
-		]
 	})} />
 
 	<!-- Schema.org BreadcrumbList -->
