@@ -23,7 +23,6 @@ const images = files.map((name, index) => ({
 const pageTitle = 'Catálogo Bandido Jeans | Colección de Jeans Premium en Perú';
 const pageDescription = 'Explora el catálogo de Bandido Jeans: denim premium para hombre, mujer y niños. Diseños únicos con lavado artesanal y estilo auténtico peruano.';
 const pageKeywords = 'catalogo bandido jeans, coleccion jeans peru, productos bandido, jeans hombre, jeans mujer, jeans niños, fotos jeans, denim collection, bandido catalog';
-const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojeans.com').href;
 ---
 
 <Layout 
@@ -31,8 +30,6 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
 	description={pageDescription}
 	keywords={pageKeywords}
 	ogImage="/imG/9.jpeg"
-    canonicalURL={canonicalCatalogo}
-    noindex={true}
 >
 	<!-- Schema.org CollectionPage -->
 	<script type="application/ld+json" set:html={JSON.stringify({
@@ -40,7 +37,7 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
 		"@type": "CollectionPage",
 		"name": pageTitle,
 		"description": pageDescription,
-        "url": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`,
+		"url": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`,
 		"inLanguage": "es-PE",
 		"isPartOf": {
 			"@type": "WebSite",
@@ -63,8 +60,8 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
 			{
 				"@type": "ListItem",
 				"position": 2,
-                "name": "Catálogo",
-                "item": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`
+				"name": "Catálogo",
+				"item": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`
 			}
 		]
 	})} />
@@ -75,14 +72,14 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
         <section class="w-full relative" style="height: 55svh; min-height: 400px;">
 			<img
 				src="/imG/9.jpeg"
-                alt="Galería Bandido Jeans"
+                alt="Catálogo Bandido Jeans"
 				loading="eager"
 				decoding="async"
 				class="w-full h-full object-cover brightness-40"
 			/>
 			<div class="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
 				<h1 class="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-white text-center drop-shadow-2xl mb-4 sm:mb-6 tracking-wider">
-                    CATÁLOGO BANDIDO JEANS
+					CATÁLOGO BANDIDO JEANS
                 </h1>
 			</div>
 		</section>

@@ -110,10 +110,10 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "SiteNavigationElement",
-			"name": ["Inicio", "Galería", "Nosotros", "Contacto"],
+			"name": ["Inicio", "Catálogo", "Nosotros", "Contacto"],
 			"url": [
 				siteURL,
-				new URL('/galeria', siteURL).href,
+				new URL('/catalogo', siteURL).href,
 				new URL('/nosotros', siteURL).href,
 				new URL('/contacto', siteURL).href
 			]
@@ -122,7 +122,7 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 			"@context": "https://schema.org",
 			"@type": "ClothingStore",
 			"name": "Bandido Jeans",
-			"description": "Fabricantes de jeans premium en Perú. Denim auténtico con lavado artesanal.",
+			"description": "Bandido Jeans: fabricantes de jeans premium en Perú. Denim auténtico con lavado artesanal y diseño local.",
 			"url": siteURL,
 			"logo": new URL('/B_icon.png', siteURL).href,
 			"image": fullOGImage,
@@ -153,7 +153,8 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 				"closes": "18:00"
 			},
 			"sameAs": [
-				"https://wa.me/51959515719"
+				"https://wa.me/51959515719",
+				"https://www.facebook.com/people/Bandido-Jeans/61573909330092/#"
 			],
 			"hasOfferCatalog": {
 				"@type": "OfferCatalog",

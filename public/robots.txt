@@ -1,8 +1,7 @@
 # Bandido Jeans - Robots.txt
 User-agent: *
 Allow: /
-Allow: /index.astro
-Allow: /galeria
+Allow: /catalogo
 Allow: /nosotros
 Allow: /contacto
 Allow: /public/

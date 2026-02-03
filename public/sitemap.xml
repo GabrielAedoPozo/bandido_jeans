@@ -6,7 +6,7 @@
   <!-- Página Principal -->
   <url>
     <loc>https://bandidojeans.com/</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -20,10 +20,10 @@
     </image:image>
   </url>
   
-  <!-- Galería -->
+  <!-- Catálogo -->
   <url>
-    <loc>https://bandidojeans.com/galeria</loc>
-    <lastmod>2026-01-31</lastmod>
+    <loc>https://bandidojeans.com/catalogo</loc>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -87,7 +87,7 @@
   <!-- Nosotros -->
   <url>
     <loc>https://bandidojeans.com/nosotros</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -99,7 +99,7 @@
   <!-- Contacto -->
   <url>
     <loc>https://bandidojeans.com/contacto</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
