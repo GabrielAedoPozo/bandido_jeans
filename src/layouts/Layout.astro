@@ -27,6 +27,25 @@ const {
 
 const siteURL = Astro.site || 'https://bandidojeans.com';
 const fullOGImage = new URL(ogImage, siteURL).href;
+const productSchema = {
+	"@context": "https://schema.org",
+	"@type": "Product",
+	"name": "Jean Bandido Classic Fit Azul",
+	"image": [new URL('/jeans.avif', siteURL).href],
+	"description": "Jean clásico de mezclilla azul, corte regular, costuras reforzadas y acabado premium.",
+	"sku": "BDJ-CL-FIT-AZ-001",
+	"brand": {
+		"@type": "Brand",
+		"name": "Bandido Jeans"
+	},
+	"offers": {
+		"@type": "Offer",
+		"price": "139.90",
+		"priceCurrency": "PEN",
+		"availability": "https://schema.org/InStock",
+		"url": new URL('/catalogo/jean-bandido-classic-fit-azul', siteURL).href
+	}
+};
 ---
 
 <!doctype html>
@@ -155,35 +174,9 @@ const fullOGImage = new URL(ogImage, siteURL).href;
 			"sameAs": [
 				"https://wa.me/51959515719",
 				"https://www.facebook.com/people/Bandido-Jeans/61573909330092/#"
-			],
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "Colección Bandido Jeans",
-				"itemListElement": [
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Product",
-							"name": "Jeans para Hombre"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Product",
-							"name": "Jeans para Mujer"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Product",
-							"name": "Jeans para Niños"
-						}
-					}
-				]
-			}
+			]
 		})} />
+		<script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 	</head>
 	<body>
 		<Header />
