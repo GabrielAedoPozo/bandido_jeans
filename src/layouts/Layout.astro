@@ -129,10 +129,11 @@ const productSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "SiteNavigationElement",
-			"name": ["Inicio", "Catálogo", "Nosotros", "Contacto"],
+			"name": ["Inicio", "Catálogo", "Galería", "Nosotros", "Contacto"],
 			"url": [
 				siteURL,
 				new URL('/catalogo', siteURL).href,
+				new URL('/galeria', siteURL).href,
 				new URL('/nosotros', siteURL).href,
 				new URL('/contacto', siteURL).href
 			]

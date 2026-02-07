@@ -20,10 +20,10 @@ const images = files.map((name, index) => ({
     title: `Bandido Jeans Modelo ${name.replace('.jpeg', '')}`,
 }));
 
-const pageTitle = 'Catálogo Bandido Jeans | Colección de Jeans Premium en Perú';
-const pageDescription = 'Explora el catálogo de Bandido Jeans: denim premium para hombre, mujer y niños. Diseños únicos con lavado artesanal y estilo auténtico peruano.';
-const pageKeywords = 'catalogo bandido jeans, coleccion jeans peru, productos bandido, jeans hombre, jeans mujer, jeans niños, fotos jeans, denim collection, bandido catalog';
-const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojeans.com').href;
+const pageTitle = 'Galería Bandido Jeans | Fotos y Modelos en Perú';
+const pageDescription = 'Explora la galería de Bandido Jeans: fotos reales de nuestros modelos para hombre, mujer y niños. Denim premium con lavado artesanal y estilo auténtico peruano.';
+const pageKeywords = 'galeria bandido jeans, fotos jeans peru, modelos bandido, jeans hombre, jeans mujer, jeans niños, denim peruano, galeria denim, bandido gallery';
+const canonicalGaleria = new URL('/galeria', Astro.site || 'https://bandidojeans.com').href;
 ---
 
 <Layout 
@@ -31,8 +31,7 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
 	description={pageDescription}
 	keywords={pageKeywords}
 	ogImage="/imG/9.jpeg"
-    canonicalURL={canonicalCatalogo}
-    noindex={true}
+    canonicalURL={canonicalGaleria}
 >
 	<!-- Schema.org CollectionPage -->
 	<script type="application/ld+json" set:html={JSON.stringify({
@@ -82,14 +81,14 @@ const canonicalCatalogo = new URL('/catalogo', Astro.site || 'https://bandidojea
 			/>
 			<div class="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
 				<h1 class="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-white text-center drop-shadow-2xl mb-4 sm:mb-6 tracking-wider">
-                    CATÁLOGO BANDIDO JEANS
+                    GALERÍA BANDIDO JEANS
                 </h1>
 			</div>
 		</section>
         <section class="max-w-6xl mx-auto px-6 sm:px-8 md:px-10">
             <div class="pb-6 border-b border-gray-200">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Colección de Jeans</h2>
-                <p class="text-lg sm:text-xl text-gray-600 mt-3">Explora nuestra selección de denim de alta calidad.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Galería de Jeans</h2>
+                <p class="text-lg sm:text-xl text-gray-600 mt-3">Mira nuestros modelos y detalles de confección en denim de alta calidad.</p>
             </div>
         </section>
 

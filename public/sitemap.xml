@@ -83,6 +83,18 @@
       <image:title>Bandido Jeans - Modelo 14</image:title>
     </image:image>
   </url>
+
+  <!-- Galería -->
+  <url>
+    <loc>https://bandidojeans.com/galeria</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bandidojeans.com/imG/9.jpeg</image:loc>
+      <image:title>Bandido Jeans - Galería</image:title>
+    </image:image>
+  </url>
   
   <!-- Nosotros -->
   <url>
