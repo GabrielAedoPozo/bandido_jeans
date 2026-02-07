@@ -23,7 +23,7 @@ const images = files.map((name, index) => ({
 const pageTitle = 'Galería Bandido Jeans | Fotos y Modelos en Perú';
 const pageDescription = 'Explora la galería de Bandido Jeans: fotos reales de nuestros modelos para hombre, mujer y niños. Denim premium con lavado artesanal y estilo auténtico peruano.';
 const pageKeywords = 'galeria bandido jeans, fotos jeans peru, modelos bandido, jeans hombre, jeans mujer, jeans niños, denim peruano, galeria denim, bandido gallery';
-const canonicalGaleria = new URL('/galeria', Astro.site || 'https://bandidojeans.com').href;
+const canonicalGaleria = new URL('/galeria', Astro.site || 'https://bandidosjeans.com').href;
 ---
 
 <Layout 
@@ -39,12 +39,12 @@ const canonicalGaleria = new URL('/galeria', Astro.site || 'https://bandidojeans
 		"@type": "CollectionPage",
 		"name": pageTitle,
 		"description": pageDescription,
-        "url": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`,
+        "url": `${Astro.site?.href || "https://bandidosjeans.com"}catalogo`,
 		"inLanguage": "es-PE",
 		"isPartOf": {
 			"@type": "WebSite",
 			"name": "Bandido Jeans",
-			"url": Astro.site?.href || "https://bandidojeans.com"
+			"url": Astro.site?.href || "https://bandidosjeans.com"
 		}
 	})} />
 
@@ -57,13 +57,13 @@ const canonicalGaleria = new URL('/galeria', Astro.site || 'https://bandidojeans
 				"@type": "ListItem",
 				"position": 1,
 				"name": "Inicio",
-				"item": Astro.site?.href || "https://bandidojeans.com"
+				"item": Astro.site?.href || "https://bandidosjeans.com"
 			},
 			{
 				"@type": "ListItem",
 				"position": 2,
                 "name": "Catálogo",
-                "item": `${Astro.site?.href || "https://bandidojeans.com"}catalogo`
+                "item": `${Astro.site?.href || "https://bandidosjeans.com"}catalogo`
 			}
 		]
 	})} />

@@ -17,4 +17,4 @@ Disallow: /admin/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://bandidojeans.com/sitemap.xml
+Sitemap: https://bandidosjeans.com/sitemap.xml

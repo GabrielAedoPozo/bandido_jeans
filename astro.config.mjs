@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: 'https://bandidojeans.com',
+  site: 'https://bandidosjeans.com',
   output: 'static',
   compressHTML: true,
   build: {
