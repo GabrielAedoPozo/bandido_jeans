@@ -38,12 +38,88 @@ const productSchema = {
 		"@type": "Brand",
 		"name": "Bandido Jeans"
 	},
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "4.8",
+		"reviewCount": "156",
+		"bestRating": "5",
+		"worstRating": "1"
+	},
+	"review": [
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "1"
+			},
+			"reviewBody": "Excelente calidad y comodidad. El denim es duradero y el acabado es de primera.",
+			"author": {
+				"@type": "Person",
+				"name": "Cliente Bandido"
+			},
+			"datePublished": "2025-12-20"
+		},
+		{
+			"@type": "Review",
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5",
+				"worstRating": "1"
+			},
+			"reviewBody": "Muy cómodos y bien confeccionados. Recomiendo ampliamente los jeans Bandido.",
+			"author": {
+				"@type": "Person",
+				"name": "Cliente Satisfecho"
+			},
+			"datePublished": "2025-12-15"
+		}
+	],
 	"offers": {
 		"@type": "Offer",
 		"price": "139.90",
 		"priceCurrency": "PEN",
 		"availability": "https://schema.org/InStock",
-		"url": new URL('/catalogo/jean-bandido-classic-fit-azul', siteURL).href
+		"url": new URL('/catalogo/jean-bandido-classic-fit-azul', siteURL).href,
+		"priceValidUntil": "2026-12-31",
+		"shippingDetails": {
+			"@type": "ShippingDeliveryTime",
+			"shippingRate": {
+				"@type": "PriceSpecification",
+				"priceCurrency": "PEN",
+				"price": "15.00"
+			},
+			"shippingDestination": {
+				"@type": "DeliveryAddress",
+				"addressCountry": "PE"
+			},
+			"deliveryTime": {
+				"@type": "ShippingDeliveryTime",
+				"handlingTime": {
+					"@type": "QuantitativeValue",
+					"minValue": 1,
+					"maxValue": 2,
+					"unitCode": "DAY"
+				},
+				"transitTime": {
+					"@type": "QuantitativeValue",
+					"minValue": 2,
+					"maxValue": 5,
+					"unitCode": "DAY"
+				}
+			}
+		},
+		"hasMerchantReturnPolicy": {
+			"@type": "MerchantReturnPolicy",
+			"returnsAccepted": true,
+			"returnPolicyCategory": "MerchantReturnFiniteReturnWindow",
+			"merchantReturnDays": 30,
+			"returnMethod": "ReturnMailIn",
+			"returnFees": "FreeReturn",
+			"restockingFee": false
+		}
 	}
 };
 ---

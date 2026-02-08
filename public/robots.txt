@@ -1,4 +1,5 @@
 # Bandido Jeans - Robots.txt
+# Configuración para Google, Bing y otros buscadores
 User-agent: *
 Allow: /
 Allow: /catalogo
@@ -8,13 +9,22 @@ Allow: /contacto
 Allow: /public/
 Allow: /imG/
 
-# Disallow admin or private areas if any
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /admin/
+# Permitir acceso a todos los assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.avif$
+Allow: /*.jpeg$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
 
-# Crawl-delay
+# Disallow admin o áreas privadas si existen
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Crawl-delay para evitar sobrecarga
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemaps location
 Sitemap: https://bandidosjeans.com/sitemap.xml

@@ -1,0 +1,98 @@
+# URLs LISTAS PARA INDEXACIÓN EN GOOGLE SEARCH CONSOLE
+
+## 🔗 COPIAR Y PEGAR EN GOOGLE SEARCH CONSOLE
+
+---
+
+## PASO 1: URLs Principales (5 URLs)
+
+Copia estas URLs una por una en el Inspector de URL de Google Search Console:
+
+```
+https://bandidosjeans.com/
+
+https://bandidosjeans.com/catalogo
+
+https://bandidosjeans.com/galeria
+
+https://bandidosjeans.com/nosotros
+
+https://bandidosjeans.com/contacto
+```
+
+---
+
+## PASO 2: Enviar Sitemap
+
+```
+https://bandidosjeans.com/sitemap.xml
+```
+
+---
+
+## PASO 3: Verificar Datos Estructurados
+
+Usa estas URLs en el Validador de Datos Estructurados:
+https://search.google.com/test/rich-results
+
+```
+https://bandidosjeans.com/
+https://bandidosjeans.com/catalogo
+https://bandidosjeans.com/nosotros
+https://bandidosjeans.com/contacto
+```
+
+---
+
+## 📊 RESUMEN RÁPIDO
+
+**Sitio:** bandidosjeans.com  
+**Páginas:** 5 principales  
+**Datos Estructurados:** Product + WebSite + Organization + CollectionPage + AboutPage + ContactPage  
+**Estado:** ✅ LISTO PARA INDEXAR  
+
+---
+
+## ✅ CHECKLIST DE ACCIONES
+
+### En Google Search Console:
+
+1. **Inspección de URL** (Inspector)
+   - [ ] https://bandidosjeans.com/
+   - [ ] https://bandidosjeans.com/catalogo
+   - [ ] https://bandidosjeans.com/galeria
+   - [ ] https://bandidosjeans.com/nosotros
+   - [ ] https://bandidosjeans.com/contacto
+
+2. **Enviar Sitemap**
+   - [ ] https://bandidosjeans.com/sitemap.xml
+
+3. **Validar Datos Estructurados**
+   - [ ] Verificar Product schema
+   - [ ] Verificar aggregateRating
+   - [ ] Verificar reviews
+   - [ ] Verificar shippingDetails
+   - [ ] Verificar hasMerchantReturnPolicy
+
+---
+
+## 🎯 PALABRA CLAVE PRINCIPAL
+
+**"bandido jeans"** - Este es tu principal objetivo de posicionamiento
+
+---
+
+## 📱 MONITOREO
+
+Una vez indexado, revisa regularmente:
+
+1. **Google Search Console** → Rendimiento (impresiones, clics, CTR)
+2. **Google Analytics** → Tráfico orgánico
+3. **Mobile-Friendly Test** → Compatibilidad móvil
+4. **Rich Results Test** → Validez de datos estructurados
+
+---
+
+**Preparado el:** 8 Febrero 2026  
+**Versión:** 1.0  
+**Estado:** ✅ COMPLETADO

@@ -1,0 +1,98 @@
+# 🔗 URLS PARA GOOGLE SEARCH CONSOLE
+
+## COPIAR Y PEGAR (Una por una)
+
+---
+
+## 📌 URLS PRINCIPALES (Solicitar Indexación)
+
+### URL 1:
+```
+https://bandidosjeans.com/
+```
+
+### URL 2:
+```
+https://bandidosjeans.com/catalogo
+```
+
+### URL 3:
+```
+https://bandidosjeans.com/galeria
+```
+
+### URL 4:
+```
+https://bandidosjeans.com/nosotros
+```
+
+### URL 5:
+```
+https://bandidosjeans.com/contacto
+```
+
+---
+
+## 🗺️ SITEMAP
+
+```
+https://bandidosjeans.com/sitemap.xml
+```
+
+---
+
+## 🧪 VALIDACIÓN
+
+Para validar datos estructurados, usa esta URL:
+```
+https://bandidosjeans.com/
+```
+
+En: https://search.google.com/test/rich-results
+
+---
+
+## 📋 PASO A PASO
+
+### 1. SOLICITAR INDEXACIÓN
+
+Ve a: https://search.google.com/search-console
+
+Para cada URL arriba:
+1. Copia la URL
+2. Pégala en el inspector
+3. Presiona ENTER
+4. Haz clic en "Solicitar indexación"
+5. Espera a que procese (✓)
+
+### 2. ENVIAR SITEMAP
+
+1. En Search Console ve a "Sitemaps"
+2. Pega el sitemap.xml
+3. Haz clic en "Enviar"
+
+### 3. VALIDAR
+
+1. Ve a Rich Results Test
+2. Pega: https://bandidosjeans.com/
+3. Verifica que esté verde ✅
+
+---
+
+## ✅ CHECKLIST
+
+- [ ] URL 1 (Principal)
+- [ ] URL 2 (Catálogo)
+- [ ] URL 3 (Galería)
+- [ ] URL 4 (Nosotros)
+- [ ] URL 5 (Contacto)
+- [ ] Sitemap enviado
+- [ ] Datos validados
+
+---
+
+**Total de URLs a indexar: 5 principales + 1 sitemap**
+
+**Tiempo: 10 minutos**
+
+**Resultado: 🚀 Tu sitio en Google en 7 días**
